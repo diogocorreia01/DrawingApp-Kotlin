@@ -13,8 +13,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import dc.kotlin.kidsdrawingapp.ui.theme.KidsDrawingAppTheme
 
 class MainActivity : ComponentActivity() {
+
+    private var drawingView: DrawinView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        drawingView = findViewById(R.id.drawing_view)
+        drawingView?.setSizeForBrush(20.toFloat())
     }
 }
